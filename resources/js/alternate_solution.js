@@ -2,10 +2,10 @@
 const data = {
   numbers: ['0','1','2','3','4','5','6','7','8','9'],
   keys: document.getElementById('keyboard').getElementsByTagName('button'),
-	history: [],
-	equation: '',
-	firstTerm: 0,
-	currentOperator:'',
+  history: [],
+  equation: '',
+  firstTerm: 0,
+  currentOperator:'',
   numberButton: val => {
   	if (data.currentOperator === '=') {
   		data.clearDisplay();
@@ -38,6 +38,7 @@ const data = {
   	  case 'Math.sqrt':
   		  if (x < 0){
   		    document.getElementById('display').innerHTML = 'Error!';
+          
   		  }	else {
   		    xOperated = parseFloat(eval(`${operator}(${x})`).toFixed(9)).toString();
   		  }
@@ -110,11 +111,11 @@ const data = {
 
 // ['Memory'(Object)] for Calculator Memory Variables/Functions
 const memory = {
-	history: [],
-	firstTerm: 0,
-	secondTerm: 0,
-	notInUse: true,
-	specialButtons: document.getElementsByClassName('not-in-use'),
+  history: [],
+  firstTerm: 0,
+  secondTerm: 0,
+  notInUse: true,
+  specialButtons: document.getElementsByClassName('not-in-use'),
   memoryHistory: (x, operator, y, e) => {
     if (operator) {
   		const equationString = `${x} ${operator} ${y} = ${e}`;
@@ -155,11 +156,11 @@ const memory = {
 
 // Header Bar Buttons : Working
 document.getElementById('menu').addEventListener('click', () => {
-	console.log('Under Construction!');
+  console.log('Under Construction!');
 })
 
 document.getElementById('history').addEventListener('click', () => {
-	console.log(data.history);
+  console.log(data.history);
   console.log(data);
 })
 
