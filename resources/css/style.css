@@ -95,6 +95,7 @@ div.row#memory div {
 div.row#memory div button {
   background: #e6e6e6;
   font-size: 0.75rem;
+
 }
 
 div.row#memory div button:hover {
@@ -119,10 +120,18 @@ div.row div {
 
 div.row div button {
   background: #d6d6d6;
+  font-size: 1.25rem;
 }
 
 div.row div button.number {
   background: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+div.row div button.basic {
+  font-size: 2rem;
+  color: rgba(0,0,0,0.75);
 }
 
 div.row div button:hover {
@@ -132,18 +141,7 @@ div.row div button:hover {
   transition: border 0.3s ease;
 }
 
-.number {
-  font-weight: bold;
-  font-size: 1.4rem;
-}
 
-.big {
-  font-size: 2rem;
-}
-
-#plus-minus {
-  content: "\00B1";
-}
 
 /* Sizing Notes */
 /* this sizing is the default windows calculator size (small)
