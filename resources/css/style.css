@@ -13,10 +13,6 @@ body {
   margin: 0 auto;
 }
 
-/* div, td {
-  border: 1px solid black;
-} */
-
 button {
   height: 100%;
   width: 100%;
@@ -149,16 +145,7 @@ div.row div button:hover {
   content: "\00B1";
 }
 
-
-
-
-
-
-
-
-
-
-
+/* Sizing Notes */
 /* this sizing is the default windows calculator size (small)
   (small)
   height: min 500px - 100%; Height does not change features
