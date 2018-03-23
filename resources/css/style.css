@@ -122,8 +122,11 @@ div.row div {
 }
 
 div.row div button {
-  background: #fff;
+  background: #d6d6d6;
+}
 
+div.row div button.number {
+  background: #fff;
 }
 
 div.row div button:hover {

@@ -38,7 +38,7 @@ const data = {
   	  case 'Math.sqrt':
   		  if (x < 0){
   		    document.getElementById('display').innerHTML = 'Error!';
-          
+
   		  }	else {
   		    xOperated = parseFloat(eval(`${operator}(${x})`).toFixed(9)).toString();
   		  }
@@ -169,11 +169,17 @@ document.getElementById('history').addEventListener('click', () => {
 for (let i = 0; i < data.keys.length; i++ ){
   data.keys[i].onclick = function(e) {
     // As a Button is Pressed its inner value is captured.
-    const btnValue = this.innerHTML;
+    let btnValue = this.innerHTML;
+    const dataValue = this.dataset.operator;
     // Check if btnValue is a number, if it is passes it as a value to
     // ['numberButton'(function)] to be displayed to primary display.
+    // Then check if dataValue has a value, if it does, set btnValue = to
+    // dataValue so that we a value to pass to our switch statement for
+    // character entities.
     if (data.numbers.includes(btnValue)) {
       data.numberButton(this.innerHTML);
+    } else if (dataValue) {
+      btnValue = dataValue;
     }
     // All other Button values are passed through this switch statement
     // To perform their individual functions
@@ -198,17 +204,17 @@ for (let i = 0; i < data.keys.length; i++ ){
         memory.toggleMemory(false);
         data.clearDisplay();
         break;
-      case 'Mv': //Memory-History
+      case 'memory-history': //Memory-History
         console.log(memory.history);
         console.log(memory);
         break;
       case '%':  //Percent
         data.higherOperation('/100');
         break;
-      case '-/': //Square-Root
+      case 'root': //Square-Root
         data.higherOperation('Math.sqrt');
         break;
-      case 'x^2': //Squared
+      case 'squared': //Squared
         data.higherOperation('**2');
         break;
       case '1/x': //Reciprocal
@@ -223,21 +229,21 @@ for (let i = 0; i < data.keys.length; i++ ){
         data.clearDisplay();
         data.clearSecondaryDisplay();
         break;
-      case 'BS': //Backspace
+      case 'backspace': //Backspace
         const input = document.getElementById('display').innerHTML;
         data.clearDisplay();
         data.displayValue(input.slice(0, -1));
         break;
-      case '/': //Divide
+      case 'divide': //Divide
         data.basicOperation('/');
         break;
-      case '*': //Multiply
+      case 'multiply': //Multiply
         data.basicOperation('*');
         break;
-      case '-': //Subtract
+      case 'minus': //Subtract
         data.basicOperation('-');
         break;
-      case '+': //Add
+      case 'add': //Add
         data.basicOperation('+');
         break;
       case '=': //Evaluate
@@ -249,7 +255,7 @@ for (let i = 0; i < data.keys.length; i++ ){
           data.displayValue(this.innerHTML);
         };
         break;
-      case '+/-': //Plus-Minus (Negate)
+      case 'negate': //Plus-Minus (Negate)
         data.higherOperation('0-');
         break;
     }

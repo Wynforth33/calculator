@@ -12,14 +12,14 @@
   <header class="flex-row">
     <nav class="flex-row">
       <div>
-        <button class="menu" id="menu">M<</button>
+        <button class="menu" id="menu">&equiv;</button>
         <div class="hidden">
         </div>
       </div>
       <h1 class="type">Standard</h1>
     </nav>
     <div class="history">
-      <button class="menu" id="history">Hv</button>
+      <button class="menu" id="history">H&blacktriangledown;</button>
     </div>
   </header>
   <!-- Display -->
@@ -47,7 +47,7 @@
         <button id="memory-store">MS</button>
       </div>
       <div class="button">
-        <button class="not-in-use" id="memory-history">Mv</button>
+        <button class="not-in-use" id="memory-history" data-operator="memory-history">M&blacktriangledown;</button>
       </div>
     </div>
     <!-- Row 1 -->
@@ -56,10 +56,10 @@
         <button id="percent">%</button>
       </div>
       <div class="button">
-        <button id="squareroot">-/</button>
+        <button id="squareroot" data-operator="root">&radic;</button>
       </div>
       <div class="button">
-        <button id="power">x^2</button>
+        <button id="power" data-operator="squared">x&sup2;</button>
       </div>
       <div class="button">
         <button id="reciprocal">1/x</button>
@@ -74,10 +74,10 @@
         <button id="clear-all">C</button>
       </div>
       <div class="button">
-        <button id="delete-last">BS</button>
+        <button id="delete-last" data-operator="backspace">&Otimes;</button>
       </div>
       <div class="button">
-        <button id="divide">/</button>
+        <button id="divide" data-operator="divide">&divide;</button>
       </div>
     </div>
     <!-- Row 3 -->
@@ -92,7 +92,7 @@
         <button class="number" id="btn-9">9</button>
       </div>
       <div class="button">
-        <button id="multiply">*</button>
+        <button id="multiply" data-operator="multiply">&times;</button>
       </div>
     </div>
     <!-- Row 4 -->
@@ -107,7 +107,7 @@
         <button class="number" id="btn-6">6</button>
       </div>
       <div class="button">
-        <button id="minus">-</button>
+        <button id="minus" data-operator="minus">&minus;</button>
       </div>
     </div>
     <!-- Row 5 -->
@@ -122,13 +122,13 @@
         <button class="number" id="btn-3">3</button>
       </div>
       <div class="button">
-        <button id="add">+</button>
+        <button id="add" data-operator="add">&plus;</button>
       </div>
     </div>
     <!-- Row 6 -->
     <div class="row flex-row">
       <div class="button">
-        <button id="plus-minus">+/-</button>
+        <button id="plus-minus" data-operator="negate">&plusmn;</button>
       </div>
       <div class="button">
         <button class="number" id="btn-0">0</button>
