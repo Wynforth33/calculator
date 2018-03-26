@@ -4,13 +4,13 @@ html {
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background: #e6e6e6;
   box-sizing: border-box;
-  border: 1px solid black;
-  height: 490px;
+  height: 458px;
   width: 320px;
   margin: 0 auto;
+  background: #e6e6e6;
+  border: 1px solid black;
+  font-family: "Arial", sans-serif;
 }
 
 button {
@@ -56,6 +56,13 @@ nav h1 {
   font-weight: normal;
 }
 
+#menu {
+  font-size: 2rem;
+  color: rgba(0,0,0,0.75);
+  height: 43px;
+  padding: 0 0.75rem;
+}
+
 /* Display */
 .display {
   width: 308px;
@@ -66,39 +73,34 @@ nav h1 {
   justify-content: flex-end;
   align-items: center;
   height: 66px;
-  width: 100%;
-  text-align: right;
   font-size: 3rem;
-
 }
 
 #secondary-display {
   justify-content: flex-end;
   align-items: center;
   height: 22px;
-  width: 100%;
-  text-align: right;
   font-size: 1rem;
   color: rgba(0,0,0,0.75);
 }
 
 /* Keyboard */
-div.row#memory {
+  /* Memory Buttons */
+.row#memory {
   justify-content: space-between;
   height: 22px;
 }
 
-div.row#memory div {
+.row#memory div {
   width: 15%;
 }
 
-div.row#memory div button {
+.row#memory div button {
   background: #e6e6e6;
   font-size: 0.75rem;
-
 }
 
-div.row#memory div button:hover {
+.row#memory div button:hover {
   background: #c7c7c7;
 }
 
@@ -106,35 +108,36 @@ div.row#memory div button:hover {
   color: rgba(0,0,0,0.5);
 }
 
-div.row {
+  /* Main Calculator Buttons */
+.row {
   justify-content: space-between;
   height: 44px;
-  margin: 5px 0;
+  margin: 2.5px 0;
   padding: 0 5px;
 }
 
-div.row div {
+.row div {
   width: 24%;
   height: 100%;
 }
 
-div.row div button {
+.row div button {
   background: #d6d6d6;
   font-size: 1.25rem;
 }
 
-div.row div button.number {
+.row div button.number {
   background: #fff;
-  font-weight: 600;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
-div.row div button.basic {
+.row div button.basic {
   font-size: 2rem;
   color: rgba(0,0,0,0.75);
 }
 
-div.row div button:hover {
+.row div button:hover {
   background: #c7c7c7;
   border: 1px solid #d6d6d6;
   transition: background 0.5s ease;

@@ -210,7 +210,7 @@ document.getElementById('clear-all').addEventListener('click', () => {
   data.clearDisplay();
   data.clearSecondaryDisplay();
 })
-document.getElementById('delete-last').addEventListener('click', () => {
+document.getElementById('backspace').addEventListener('click', () => {
   const input = document.getElementById('display').innerHTML;
   data.clearDisplay();
   data.displayValue(input.slice(0, -1));
