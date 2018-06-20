@@ -1,5 +1,5 @@
 Calculator Project: James Edwards III
-
+GitHub Pages Site Viewable --> https://wynforth33.github.io/calculator/
 Goal: to emulate windows 10 basic calculator. 
 
 Buttons Emulated: 
